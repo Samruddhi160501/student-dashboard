@@ -13,7 +13,7 @@ function Home() {
 
   const handleDeleteStudent = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/${id}`)
+      .delete(`${process.env.REACT_APP_API_URL}/students/${id}`)
       .then((response) => {
         setStudents((prevStudents) =>
           prevStudents.filter((el) => el._id !== id)
@@ -25,7 +25,7 @@ function Home() {
   };
   const fetchStudents = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}`)
+      .get(`${process.env.REACT_APP_API_URL}/students`)
       .then((response) => {
         setStudents(response.data);
       })

@@ -24,7 +24,7 @@ const StudentTable = ({}) => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}`)
+      .get(`${process.env.REACT_APP_API_URL}/students`)
       .then((response) => {
         setStudents(response.data);
       })
@@ -35,7 +35,7 @@ const StudentTable = ({}) => {
 
   const deleteStudent = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/` + id)
+      .delete(`${process.env.REACT_APP_API_URL}/students/` + id)
       .then((response) => {
         console.log(response.data);
         setStudents(students.filter((el) => el._id !== id));
