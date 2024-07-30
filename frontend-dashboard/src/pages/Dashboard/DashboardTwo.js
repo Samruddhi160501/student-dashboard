@@ -21,7 +21,7 @@ import {
 } from "chart.js";
 import DashboardStyles from "./DashboardStyles";
 
-// Register the necessary Chart.js components
+//necessary Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,

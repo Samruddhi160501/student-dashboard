@@ -28,6 +28,7 @@ const HomeStyles = {
   },
   ButtonContainer: {
     marginTop: "2%",
+    paddingBottom: "2%",
     display: "flex",
     textAlign: "center",
     justifyContent: "center",
