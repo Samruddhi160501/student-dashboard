@@ -12,10 +12,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://samruddhi16:Samruddhi%4016052001@cluster0.lvuzwmh.mongodb.net/studentdb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
