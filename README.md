@@ -23,7 +23,7 @@ _Dashboard showing student data by year using Chartjs_
 ![Material Ui Dashboard View](assets/SelectYear.PNG)
 _Select year from the dropdown_
 
-![Material Ui Dashboard View](assets/TooltipCharts.PNG)
+![Material Ui Dashboard View](assets/TooltipCharts.png)
 _View addition information through tooltip_
 
 ![Material Ui Dashboard View](assets/MaterialUiDAshboard.PNG)
