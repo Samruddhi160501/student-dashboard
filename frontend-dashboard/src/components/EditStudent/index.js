@@ -47,7 +47,7 @@ const EditStudent = () => {
 
     axios
       .put(
-        `${process.env.REACT_APP_API_URL}/students/update/${id}`,
+        `https://student-dashboard-server.vercel.app/students/update/${id}`,
         updatedStudent
       )
       .then((res) => {
