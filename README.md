@@ -25,6 +25,12 @@ _Dashboard showing student data by year_
 ![Dashboard View](assets/ChartjsDashboard.PNG)
 _Dashboard showing student data by year using Chartjs_
 
+![Material Ui Dashboard View](assets/SelectYear.PNG)
+_Select year from the dropdown_
+
+![Material Ui Dashboard View](assets/TooltipCharts.PNG)
+_View addition information through tooltip_
+
 ![Material Ui Dashboard View](assets/MaterialUiDAshboard.PNG)
 _Form to edit student details_
 
