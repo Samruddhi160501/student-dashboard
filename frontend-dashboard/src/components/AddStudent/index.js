@@ -33,7 +33,7 @@ const AddStudent = () => {
 
     axios
       .post(
-        `https://student-dashboard-server.vercel.app/students/add`,
+        `https://student-dashboard-beta.vercel.app/students/add`,
         newStudent
       )
       .then((res) => {

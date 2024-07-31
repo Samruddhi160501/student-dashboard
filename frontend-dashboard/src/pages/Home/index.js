@@ -25,7 +25,7 @@ function Home() {
   };
   const fetchStudents = () => {
     axios
-      .get(`https://student-dashboard-server.vercel.app/students`)
+      .get(`https://student-dashboard-beta.vercel.app/students`)
       .then((response) => {
         setStudents(response.data);
       })

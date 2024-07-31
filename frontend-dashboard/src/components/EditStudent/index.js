@@ -23,7 +23,7 @@ const EditStudent = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/students/${id}`)
+      .get(`https://student-dashboard-beta.vercel.app/students/${id}`)
       .then((response) => {
         setName(response.data.name);
         setAge(response.data.age);
@@ -47,7 +47,7 @@ const EditStudent = () => {
 
     axios
       .put(
-        `https://student-dashboard-server.vercel.app/students/update/${id}`,
+        `https://student-dashboard-beta.vercel.app/students/update/${id}`,
         updatedStudent
       )
       .then((res) => {

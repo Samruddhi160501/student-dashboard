@@ -40,7 +40,7 @@ const DashboardTwo = () => {
 
   useEffect(() => {
     axios
-      .get(`https://student-dashboard-server.vercel.app/students`)
+      .get(`https://student-dashboard-beta.vercel.app/students`)
       .then((response) => {
         const students = response.data;
 
