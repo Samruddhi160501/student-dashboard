@@ -6,12 +6,7 @@ This is a student dashboard project where users can perform CRUD operations, vie
 
 - [About the Project](#about-the-project)
 - [Screenshots](#screenshots)
-- [Folder Structure](#folder-structure)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About the Project
 
