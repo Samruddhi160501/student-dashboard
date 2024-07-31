@@ -85,7 +85,7 @@ const Dashboard = () => {
   return (
     <Box sx={DashboardStyles.Container}>
       <Typography variant="h4" gutterBottom sx={DashboardStyles.Heading}>
-        Student Dashboard using Material Ui Charts
+        Student Dashboard using Material UI Charts
       </Typography>
 
       <FormControl sx={{ minWidth: 120, marginBottom: 3 }}>
