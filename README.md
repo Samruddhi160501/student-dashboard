@@ -32,7 +32,7 @@ _Select year from the dropdown_
 _View addition information through tooltip_
 
 ![Material Ui Dashboard View](assets/MaterialUiDAshboard.PNG)
-_Form to edit student details_
+_Dashboard showing student data by year using Material UI_
 
 ![Add Student](assets/AddStudent.JPG)
 _Form to add a new student_
