@@ -25,7 +25,7 @@ function Home() {
   };
   const fetchStudents = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/students`)
+      .get(`https://student-dashboard-server.vercel.app/students`)
       .then((response) => {
         setStudents(response.data);
       })
