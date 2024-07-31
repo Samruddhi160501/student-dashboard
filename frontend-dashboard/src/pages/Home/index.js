@@ -13,7 +13,7 @@ function Home() {
 
   const handleDeleteStudent = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/students/${id}`)
+      .delete(`https://student-dashboard-server.vercel.app/students/${id}`)
       .then((response) => {
         setStudents((prevStudents) =>
           prevStudents.filter((el) => el._id !== id)
