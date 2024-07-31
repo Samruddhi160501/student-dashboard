@@ -32,10 +32,7 @@ const AddStudent = () => {
     };
 
     axios
-      .post(
-        `https://student-dashboard-beta.vercel.app/students/add`,
-        newStudent
-      )
+      .post(`${process.env.REACT_APP_API_URL}/students/add`, newStudent)
       .then((res) => {
         console.log(res.data);
         setOpenSnackbar(true);

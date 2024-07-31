@@ -2,28 +2,18 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const app = express();
 
-// CORS Configuration
-const corsOptions = {
-  // Update with your frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb+srv://samruddhi16:Samruddhi%4016052001@cluster0.lvuzwmh.mongodb.net/studentdb",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const connection = mongoose.connection;
 connection.once("open", () => {

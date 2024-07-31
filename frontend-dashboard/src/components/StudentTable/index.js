@@ -11,6 +11,8 @@ import {
   TablePagination,
   Button,
   Box,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import StudentTableStyles from "./StudentTableStyles";
@@ -21,10 +23,11 @@ const StudentTable = ({}) => {
   const [students, setStudents] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`https://student-dashboard-beta.vercel.app/students`)
+      .get(`${process.env.REACT_APP_API_URL}/students`)
       .then((response) => {
         setStudents(response.data);
       })
@@ -35,10 +38,14 @@ const StudentTable = ({}) => {
 
   const deleteStudent = (id) => {
     axios
-      .delete(`https://student-dashboard-beta.vercel.app/students/` + id)
+      .delete(`${process.env.REACT_APP_API_URL}/students/` + id)
       .then((response) => {
         console.log(response.data);
         setStudents(students.filter((el) => el._id !== id));
+        setOpenSnackbar(true);
+        setTimeout(() => {
+          setOpenSnackbar(false);
+        }, 3000);
       })
       .catch((error) => {
         console.log(error);
@@ -116,6 +123,16 @@ const StudentTable = ({}) => {
           sx={StudentTableStyles.Pagination}
         />
       </Box>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000}
+        onClose={() => setOpenSnackbar(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert onClose={() => setOpenSnackbar(false)} severity="success">
+          Student deleted successfully!
+        </Alert>
+      </Snackbar>
     </Paper>
   );
 };
