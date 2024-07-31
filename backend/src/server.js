@@ -7,7 +7,7 @@ const app = express();
 
 // CORS Configuration
 const corsOptions = {
-  // Update with your frontend URL
+   origin: "https://student-dashboard-app.vercel.app"
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
